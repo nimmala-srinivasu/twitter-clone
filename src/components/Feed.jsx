@@ -1,9 +1,12 @@
 import React from "react";
+import "./Feed.css";
 
 export default function Feed() {
   return (
-    <div>
-      <h1>feed</h1>
+    <div className="feed">
+      <div className="feed__header">
+        <h2>Home</h2>
+      </div>
     </div>
   );
 }
