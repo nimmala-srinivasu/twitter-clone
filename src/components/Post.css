@@ -5,14 +5,19 @@
   padding-bottom: 10px;
 }
 
-.post__body > img {
-  border-radius: 20px;
-  width: 40%;
-}
-
 .post__body {
   flex: 1;
   padding: 10px;
+}
+
+.post__body > img {
+  border-radius: 20px;
+}
+
+.post__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .post__headerDescription {
@@ -23,12 +28,6 @@
 .post__headerText > h3 {
   font-size: 15px;
   margin-bottom: 5px;
-}
-
-.post__footer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
 }
 
 .post__badge {
