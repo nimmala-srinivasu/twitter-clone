@@ -7,30 +7,28 @@ import RepeateIcon from "@mui/icons-material/RepeatOne";
 import FavouriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import PublishIcon from "@mui/icons-material/Publish";
 
-function Post() {
+function Post({ displayNmae, userName, verified, text, image, avatar }) {
   return (
     <div className="post">
       <div className="post__avatar">
-        <Avatar src="https://i.pinimg.com/564x/0c/f8/2c/0cf82cc12c00d79e8a5c08f953585ef7.jpg" />
+        <Avatar src={avatar} />
       </div>
       <div className="post__body">
         <div className="post__header">
           <div className="post__headerText">
             <h3>
-              NPS{" "}
+              {displayNmae}{" "}
               <span className="post__headerSpecial">
-                <VerifiedUserIcon className="post__badge" /> @nps
+                {verified && <VerifiedUserIcon className="post__badge" />} @
+                {userName}
               </span>
             </h3>
           </div>
           <div className="post__headerDescription">
-            <p>Post message</p>
+            <p>{text}</p>
           </div>
         </div>
-        <img
-          src="https://m.media-amazon.com/images/I/711dxTf0zDL._RI_.jpg"
-          alt="post"
-        />
+        <img src={image} alt="post" width={500} />
         <div className="post__footer">
           <ChatBubbleOutlineIcon fontSize="small" />
           <RepeateIcon fontSize="small" />
